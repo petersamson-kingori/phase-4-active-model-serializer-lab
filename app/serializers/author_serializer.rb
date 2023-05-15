@@ -1,5 +1,8 @@
 class AuthorSerializer < ActiveModel::Serializer
-  attributes :name, :profile
-  has_one :profile, serializer: ProfileSerializer
-  has_many :posts, serializer: PostSerializer
+  attributes :name, :profile, :posts
+  has_many :posts
+  has_one :profile
+
+  
+  
 end
